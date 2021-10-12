@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{.ID.Hex}}</title>
+</head>
+
+<body>
+<div>
+    / <a href="/">{{.DatabaseName}}</a>
+    / <a href="/collection?name={{.CollectionName}}">{{.CollectionName}}</a>
+    / <a href="/document?collection={{.CollectionName}}&id={{.ID.Hex}}">{{.ID.Hex}}</a>
+</div>
+<h1>{{.ID.Hex}}</h1>
+<pre>{{.Document}}</pre>
+</body>
+</html>

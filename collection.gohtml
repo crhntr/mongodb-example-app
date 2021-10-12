@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{.CollectionName}}</title>
+</head>
+
+<body>
+    <div>
+        / <a href="/">{{.DatabaseName}}</a> / <a href="/collection?name={{.CollectionName}}">{{.CollectionName}}</a>
+    </div>
+    <h1>{{.CollectionName}}</h1>
+    <div>Contains {{.DocumentCount}} document{{- if ne .DocumentCount 1 }}s{{end}}.
+    </div>
+    <ul>
+        {{range .IDs}}
+            <li>
+                <a href="/document?collection={{$.CollectionName}}&id={{.Hex}}">{{.Hex}}</a>
+            </li>
+        {{end}}
+    </ul>
+</body>
+</html>
